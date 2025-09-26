@@ -77,14 +77,42 @@ models = load_models()
 # ------------------------------
 # Define class names (39 breeds)
 # ------------------------------
-class_names = [
-    "Alambadi", "Amritmahal", "Ayrshire", "Banni", "Bargur", "Bhadawari",
-    "Brown Swiss", "Deoni", "Gir", "Guernsey", "Hallikan", "Hariana",
-    "Holstein Friesian", "Jaffrabadi", "Jersey", "Kangayam", "Kankrej",
-    "Kasangod", "Khillari", "Krishna Valley", "Malnad gidda", "Mehsana",
-    "Murrah", "Nagori", "Nagpuri", "Nimari", "Ongole", "Pulikulam",
-    "Rathi", "Red Dane", "Red Sindhi", "Sahival", "Surti", "Tharparkan",
-    "Toda", "Umblachery", "Vechur"
+class_names = ["Alambadi",
+            "Amritmahal",
+            "Ayrshire",
+            "Banni",
+            "Bargur",
+            "Bhadawari",
+            "Brown Swiss",
+            "Deoni",
+            "Gir",
+            "Guernsey",
+            "Hallikar",
+            "Hariana",
+            "Holstein Friesian",
+            "Jaffrabadi",
+            "Jersey",
+            "Kankrej",
+            "Kasargod",
+            "Khillari",
+            "Krishna Valley",
+            "Malnad Gidda",
+            "Mehsana",
+            "Murrah",
+            "Nagori",
+            "Nagpuri",
+            "Nimari",
+            "Ongole",
+            "Pulikulam",
+            "Rathi",
+            "Red Dane",
+            "Red Sindhi",
+            "Sahival",
+            "Surti",
+            "Tharparkar",
+            "Toda",
+            "Umblachery",
+            "Vechur"
 ]
 
 # ------------------------------
@@ -248,4 +276,5 @@ async def health_check():
 if __name__ == "__main__":
     import uvicorn
     port = int(os.getenv("PORT", 8000))
+
     uvicorn.run(app, host="0.0.0.0", port=port, log_level="info")
